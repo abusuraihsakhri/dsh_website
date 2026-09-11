@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" id="metaTheme" content="#0B0C0E">
+<title>Delhi Society of Hematology — Official Register &amp; Academic Portal</title>
+<meta name="description" content="Delhi Society of Hematology (Est. 1989) — Advancing the science of hematology. Official membership register of __MEMBERS_COUNT__ life members, quarterly CME meetings, annual conferences, and academic membership.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'%3E%3Cpath d='M12 2c3.6 5.6 7 9.2 7 14a7 7 0 1 1-14 0c0-4.8 3.4-8.4 7-14z' fill='%238f1d33'/%3E%3C/svg%3E">
+<script>
+/* Theme boot — run before first paint to prevent color flash */
+(function(){
+  var t = null;
+  try { t = localStorage.getItem('dsh-theme'); } catch(e){}
+  if (t !== 'light' && t !== 'dark') {
+    t = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+  }
+  document.documentElement.dataset.theme = t;
+})();
+</script>
+<style>
+__CSS__
+</style>
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+
+<!-- Institutional Navigation & Window Tabs -->
+<header class="site-header">
+  <nav class="top" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#home" data-target="home" aria-label="Delhi Society of Hematology Home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 32" fill="none">
+            <path d="M12 3c3.4 5.8 6.8 9.3 6.8 13.6A6.8 6.8 0 1 1 5.2 16.6C5.2 12.3 8.6 8.8 12 3z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9.4 17.2a3.2 3.2 0 0 0 3.2 3.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-b">
+          <b>DSH</b>
+          <small>Delhi Society of Hematology</small>
+        </span>
+      </a>
+
+      <!-- Portal Navigation Tabs -->
+      <div class="nav-window-tabs" id="windowNavTabs" role="tablist" aria-label="Portal Navigation">
+        <button class="win-tab-btn active" data-target="home" role="tab" aria-selected="true" id="tab-btn-home">
+          <span>Overview</span>
+        </button>
+        <button class="win-tab-btn" data-target="about" role="tab" aria-selected="false" id="tab-btn-about">
+          <span>About</span>
+        </button>
+        <button class="win-tab-btn" data-target="programme" role="tab" aria-selected="false" id="tab-btn-programme">
+          <span>Programme</span>
+        </button>
+        <button class="win-tab-btn" data-target="directory" role="tab" aria-selected="false" id="tab-btn-directory">
+          <span>Register</span>
+          <span class="tab-badge">__MEMBERS_COUNT__</span>
+        </button>
+        <button class="win-tab-btn" data-target="certificate" role="tab" aria-selected="false" id="tab-btn-certificate">
+          <span>Certificates</span>
+        </button>
+        <button class="win-tab-btn win-tab-cta" data-target="join" role="tab" aria-selected="false" id="tab-btn-join">
+          <span>Join DSH</span>
+        </button>
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-search-trigger" id="quickSearchBtn" title="Quick Search (Press /)" aria-label="Quick search member register">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+          <kbd>/</kbd>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch colour theme" title="Toggle Light / Dark mode">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <button id="navToggle" class="nav-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Slide-out Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand">
+          <span class="mark"><svg viewBox="0 0 24 32" fill="none"><path d="M12 3c3.4 5.8 6.8 9.3 6.8 13.6A6.8 6.8 0 1 1 5.2 16.6C5.2 12.3 8.6 8.8 12 3z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <span class="brand-b"><b>DSH</b><small>Delhi Society of Hematology</small></span>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">✕</button>
+      </div>
+      <ul class="drawer-nav">
+        <li><button class="drawer-link" data-target="home"><span class="drawer-num">01</span> Portal Overview</button></li>
+        <li><button class="drawer-link" data-target="about"><span class="drawer-num">02</span> About the Society</button></li>
+        <li><button class="drawer-link" data-target="programme"><span class="drawer-num">03</span> Academic Programme &amp; CMEs</button></li>
+        <li><button class="drawer-link" data-target="directory"><span class="drawer-num">04</span> Member Register (__MEMBERS_COUNT__)</button></li>
+        <li><button class="drawer-link" data-target="certificate"><span class="drawer-num">05</span> Certificate &amp; ID Card</button></li>
+        <li><button class="drawer-link" data-target="join"><span class="drawer-num">06</span> Membership &amp; Join</button></li>
+      </ul>
+      <div class="drawer-footer">
+        <button class="btn btn-primary" data-target="join" style="width:100%;justify-content:center">Request Membership</button>
+        <div class="drawer-meta">
+          <span>Official Public Register (Est. 1989)</span>
+          <span>Delhi-NCR, India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Section Navigation Bar (Sub-Header Breadcrumb & Controls) -->
+<div class="window-bar" aria-label="Section Navigation Controls">
+  <div class="wrap window-bar-inner">
+    <div class="window-breadcrumbs">
+      <span class="wb-root">DSH Portal</span>
+      <span class="wb-sep">/</span>
+      <span class="wb-current" id="windowCurrentTitle">Overview &amp; Highlights</span>
+    </div>
+    <div class="window-quick-pills">
+      <span class="win-kbd-hint" title="Use Left and Right arrow keys on your keyboard to navigate sections"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> navigate</span>
+      <span class="win-pill" id="winCounterPill">Section 1 of 6</span>
+      <button class="win-nav-step" id="prevWinStepBtn" title="Previous Section (&larr;)">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>Prev</span>
+      </button>
+      <button class="win-nav-step" id="nextWinStepBtn" title="Next Section (&rarr;)">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MAIN SUB-WINDOW STAGE ================= -->
+<main id="windowStage" class="window-stage">
+
+  <!-- ================= WINDOW 1: OVERVIEW / HOME ================= -->
+  <article class="sub-window active" id="win-home" data-win="home" role="tabpanel" aria-labelledby="tab-btn-home">
+    <header class="hero" id="home">
+      <canvas id="gl-hero" aria-label="Interactive 3D WebGL simulation of cellular hematology"></canvas>
+      <div class="hero-vignette"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text">Est. 1989 &nbsp;·&nbsp; Delhi-NCR Medical Specialty Association</span>
+        </div>
+
+        <!-- Big Heading -->
+        <h1 class="hero-main-title">Delhi Society of Hematology</h1>
+
+        <!-- Smaller Sub-Heading Below Big Heading -->
+        <h2 class="hero-subhead">Advancing the Science of Blood &amp; Marrow</h2>
+
+        <!-- Prominent Tagline -->
+        <p class="hero-tagline">Advancing the science of hematology</p>
+
+        <!-- Rich Descriptions -->
+        <div class="hero-descriptions-block">
+          <p class="sub">
+            The premier professional and academic association uniting Delhi's clinical hematologists,
+            hematopathologists, pediatric hematologists, laboratory scientists, and blood transfusion specialists.
+            Founded in the late 1980s, the society has spearheaded three decades of clinical education,
+            multidisciplinary consensus guidelines, quarterly teaching hospital conclaves, and a certified register of
+            <b class="highlight-count">__MEMBERS_COUNT__ life members</b>.
+          </p>
+          <div class="hero-highlights-pills">
+            <span class="h-pill">Quarterly Clinical CMEs</span>
+            <span class="h-pill">Annual September Conference</span>
+            <span class="h-pill">National Oration Awards</span>
+            <span class="h-pill">__MEMBERS_COUNT__ Registered Life Members</span>
+          </div>
+        </div>
+
+        <!-- Action CTAs: Quick Section Access -->
+        <div class="cta">
+          <button class="btn btn-primary" data-target="directory">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+            Browse Member Register (__MEMBERS_COUNT__)
+          </button>
+          <button class="btn btn-ghost" data-target="programme">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Academic Programme &amp; CMEs
+          </button>
+          <button class="btn btn-subtle" data-target="certificate">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+            Verify / Print Certificate
+          </button>
+          <button class="btn btn-ghost" data-target="join">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Join Society
+          </button>
+        </div>
+
+        <!-- Institutional Key Metrics Strip -->
+        <div class="hero-stats">
+          <div class="stat">
+            <b><span data-count="__MEMBERS_COUNT__">0</span></b>
+            <span>Life Members Registered</span>
+          </div>
+          <div class="stat">
+            <b><span data-count="30">0</span>+</b>
+            <span>Annual Conferences</span>
+          </div>
+          <div class="stat">
+            <b><span data-count="__EMAILS__">0</span></b>
+            <span>Reachable via Direct Email</span>
+          </div>
+          <div class="stat">
+            <b><span data-count="4">0</span>&nbsp;×</b>
+            <span>Quarterly CMEs Annually</span>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    
+    <!-- Education & CME -->
+    <section class="education-section">
+      <div class="window-inner-head">
+        <span class="overline">Continuing Medical Education</span>
+        <h2 class="title">CME Programme &amp; Educational Resources</h2>
+        <p class="lead-subhead">DSH conducts quarterly CME meetings, annual conferences, and certified educational programmes.</p>
+      </div>
+      <div class="cme-grid">
+        <div class="cme-card">
+          <h4>Quarterly CMEs</h4>
+          <p>Case conclaves, slide workshops, and morphological seminars at premier teaching hospitals.</p>
+        </div>
+        <div class="cme-card">
+          <h4>Annual Conference</h4>
+          <p>September meet with national orations, guest faculty, and research abstracts.</p>
+        </div>
+        <div class="cme-card">
+          <h4>Online Courses</h4>
+          <p>Certified courses on blood clots, DOACs, stem cell transplant, and MDS updates.</p>
+          <a href="https://medicallearninghub.com" target="_blank" rel="noopener" class="cme-link">Access Courses</a>
+        </div>
+        <div class="cme-card">
+          <h4>Webinar Series</h4>
+          <p>Recordings on myeloproliferative neoplasms, CML, and hematopathology.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Awards -->
+    <section class="awards-section">
+      <div class="window-inner-head">
+        <span class="overline">Prestigious Awards</span>
+        <h2 class="title">DSH Awards &amp; Orations</h2>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card">
+          <h4>Lifetime Achievement Award</h4>
+          <p>Recognizing outstanding contributions to hematology in Delhi-NCR.</p>
+        </div>
+        <div class="award-card">
+          <h4>DSH Oration</h4>
+          <p>Annual oration by eminent hematologists at the conference.</p>
+        </div>
+        <div class="award-card">
+          <h4>Recent Awardees</h4>
+          <p>Prof. Renu Saxena &bull; Prof. Jagdish Chandra</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <span class="win-foot-status">Delhi Society of Hematology &bull; Official Portal</span>
+        <button class="btn btn-sm btn-primary win-next-btn" data-target="about">
+          Next: About the Society &rarr;
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================= SECTION 2: ABOUT THE SOCIETY ================= -->
+  <article class="sub-window" id="win-about" data-win="about" role="tabpanel" aria-labelledby="tab-btn-about">
+    <section id="about">
+      <canvas id="dna-canvas" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="window-inner-head">
+          <span class="overline">Institutional Heritage &amp; Leadership</span>
+          <h2 class="title">About the Delhi Society of Hematology</h2>
+          <p class="lead-subhead">Advancing the science of hematology across research, teaching, and clinical practice in Delhi-NCR since the late 1980s.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal in">
+            <h3 class="about-sub-title">Founding Mission &amp; Clinical Concord</h3>
+            <p>
+              The <b>Delhi Society of Hematology (DSH)</b> is the pre-eminent academic and clinical society uniting clinical hematologists,
+              hematopathologists, pediatric hematologists, hemato-oncologists, and laboratory physicians across Delhi-NCR. Founded in the late
+              1980s, the society held its milestone <b>30th Annual Conference</b> in September 2019 and continues an uninterrupted tradition of clinical education.
+            </p>
+            <p>
+              Its registered membership comprises <b>__MEMBERS_COUNT__ life members</b> representing major apex medical institutions, including <b>AIIMS</b>, <b>MAMC &amp; Lok Nayak</b>,
+              <b>UCMS &amp; GTB Hospital</b>, <b>Lady Hardinge Medical College</b>, <b>Sir Ganga Ram Hospital</b>, the <b>Army Hospital (Research &amp; Referral)</b>,
+              and prominent specialty healthcare centres across northern India.
+            </p>
+
+            
+    <!-- President's & Secretary's Messages -->
+    <section class="leadership-messages">
+      <div class="msg-card president">
+        <div class="msg-header">
+          <div class="msg-avatar">MM</div>
+          <div class="msg-meta">
+            <h4>Dr. M. Mahapatra</h4>
+            <span class="msg-role">President, DSH &bull; AIIMS, Delhi</span>
+          </div>
+        </div>
+        <blockquote class="msg-body">
+          I welcome the new DSH members on behalf of Delhi Society of Hematology. We hope to motivate the young minds to contribute more and more for diagnosis, treatment and research in the field of Haematology.
+        </blockquote>
+      </div>
+      <div class="msg-card secretary">
+        <div class="msg-header">
+          <div class="msg-avatar">RN</div>
+          <div class="msg-meta">
+            <h4>Dr. Rahul Naithani</h4>
+            <span class="msg-role">Secretary, DSH &bull; Artemis Hospital, Gurugram</span>
+          </div>
+        </div>
+        <blockquote class="msg-body">
+          Promoting Hematology. Hematology is one of the most current and dynamic branches, with constant updates and breakthroughs. Let us embark on a journey of learning and research for Delhi/NCR and all.
+        </blockquote>
+      </div>
+    </section>
+    
+<div class="about-pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon">01</div>
+                <h4>Quarterly CMEs</h4>
+                <p>Rotational case conclaves, slide workshops, and morphological seminars hosted at premier teaching hospitals.</p>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon">02</div>
+                <h4>Annual September Meet</h4>
+                <p>Three decades of the flagship state conference featuring national orations, guest faculty, and scientific research abstracts.</p>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon">03</div>
+                <h4>Prestige Orations</h4>
+                <p>Annual conferment of the prestigious <b>DSH Oration</b> and the <b>Dr. S.K. Sood Lifetime Achievement Award</b>.</p>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-icon">04</div>
+                <h4>Academic Registry</h4>
+                <p>A unified professional directory connecting over 600 clinicians for consults, referrals, and cooperative trials.</p>
+              </div>
+            </div>
+
+            <blockquote class="quote">
+              <p>“The society holds regular quarterly meetings at various institutions… an annual conference is held in the month of September each year.
+              An oration is awarded to an eminent hematologist. All these events help keep hematologists and postgraduates abreast with new advances and practices.”</p>
+              <cite>Dr. Meera Sikka — President, Delhi Society of Hematology</cite>
+            </blockquote>
+          </div>
+
+          <!-- Governance & Office Bearers -->
+          <div class="about-aside reveal in">
+            <div class="sec-head" style="margin-bottom:24px">
+              <span class="overline">Executive Secretariat</span>
+              <h3 class="aside-title">Office Bearers</h3>
+            </div>
+
+            <div class="leaders">
+              <article class="lead-card">
+                <div class="lead-avatar">MS</div>
+                <div class="lead-info">
+                  <h3>Dr. Meera Sikka</h3>
+                  <div class="role">President, DSH</div>
+                  <p class="lead-pos">Director, Professor &amp; Head, Department of Pathology</p>
+                  <p class="lead-inst">UCMS &amp; GTB Hospital, Dilshad Garden, Delhi</p>
+                  <div class="lead-meta-pills">
+                    <span class="meta-pill">Life Member #096</span>
+                    <span class="meta-pill">Consultant Pathologist</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="lead-card">
+                <div class="lead-avatar">JK</div>
+                <div class="lead-info">
+                  <h3>Dr. Jyoti Kotwal</h3>
+                  <div class="role">Secretary &amp; Correspondent, DSH</div>
+                  <p class="lead-pos">Chairperson &amp; Professor, Department of Hematology</p>
+                  <p class="lead-inst">Sir Ganga Ram Hospital &amp; GRIPMER, Rajinder Nagar, New Delhi</p>
+                  <div class="lead-meta-pills">
+                    <span class="meta-pill">Life Member #067</span>
+                    <span class="meta-pill">Former Lt. Col., AMC</span>
+                  </div>
+                  <div class="lead-contact">
+                    <a class="contact-link" href="mailto:drjyotikotwal@gmail.com">
+                      <svg viewBox="0 0 24 32" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                      drjyotikotwal@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="secretariat-box">
+              <h4>Secretariat Desk</h4>
+              <p>Department of Hematology, Room 1416, Sir Ganga Ram Hospital, Rajinder Nagar, New Delhi — 110060</p>
+              <div class="box-actions">
+                <a class="btn btn-sm btn-ghost" href="mailto:drjyotikotwal@gmail.com">Contact Secretariat</a>
+                <button class="btn btn-sm btn-subtle" data-target="join">Membership Forms</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <button class="btn btn-sm btn-ghost" data-target="home">&larr; Back to Overview</button>
+        <span class="win-foot-status">About the Society &bull; Delhi Society of Hematology</span>
+        <button class="btn btn-sm btn-primary" data-target="programme">Next: Programme &amp; CMEs &rarr;</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================= SECTION 3: ACADEMIC PROGRAMME & CMEs ================= -->
+  <article class="sub-window" id="win-programme" data-win="programme" role="tabpanel" aria-labelledby="tab-btn-programme">
+    <section id="programme">
+      <div class="wrap">
+        <div class="window-inner-head center">
+          <span class="overline">Academic Programme &amp; Calendar</span>
+          <h2 class="title">Conferences, CMEs &amp; <em>Honours</em></h2>
+          <p>Continuing medical education, clinical slide conclaves, and annual society honors curated for clinicians, faculty, and postgraduate postgraduates &amp; residents.</p>
+        </div>
+
+        <!-- Programme Interactive Tabs -->
+        <div class="prog-tabs">
+          <button class="prog-tab-btn active" data-tab="cmes">Quarterly CME Sessions</button>
+          <button class="prog-tab-btn" data-tab="timeline">Annual Conference Timeline</button>
+          <button class="prog-tab-btn" data-tab="awards">Orations &amp; Lifetime Awards</button>
+        </div>
+
+        <!-- Tab 1: Quarterly CMEs -->
+        <div class="prog-tab-content active" id="tab-cmes">
+          <div class="cme-grid">
+            <article class="cme-card">
+              <div class="cme-quarter">Q1 Meeting &bull; March</div>
+              <h3>Minimal Residual Disease &amp; Flow Cytometry in Acute Leukaemia</h3>
+              <p class="cme-desc">Case discussions on 10-colour immunophenotyping, diagnostic pitfalls in AML vs ALL lineage switch, and MRD assessment following induction chemotherapy.</p>
+              <div class="cme-details">
+                <div class="cme-item">
+                  <span class="cme-label">Venue</span>
+                  <b>All India Institute of Medical Sciences (AIIMS), New Delhi</b>
+                </div>
+                <div class="cme-item">
+                  <span class="cme-label">Format</span>
+                  <span>Slide Seminar &bull; Interactive Microscope Workshop &bull; Case Presentation</span>
+                </div>
+              </div>
+              <div class="cme-footer">
+                <span class="cme-tag">CME Credits Applicable</span>
+                <button class="btn btn-sm btn-ghost add-cal-btn" data-title="DSH Q1 CME: Flow Cytometry in Acute Leukaemia" data-desc="DSH Quarterly CME Meeting at AIIMS New Delhi on Minimal Residual Disease & Flow Cytometry" data-loc="AIIMS, Ansari Nagar, New Delhi">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+                  Add to Calendar (.ics)
+                </button>
+              </div>
+            </article>
+
+            <article class="cme-card">
+              <div class="cme-quarter">Q2 Meeting &bull; June</div>
+              <h3>Haemoglobinopathies &amp; Complex Thalassaemias in Northern India</h3>
+              <p class="cme-desc">Screening protocols, HPLC peak interpretation, antenatal counseling, and advances in gene-editing and curative bone marrow transplantation in thalassaemia major.</p>
+              <div class="cme-details">
+                <div class="cme-item">
+                  <span class="cme-label">Venue</span>
+                  <b>UCMS &amp; Guru Teg Bahadur (GTB) Hospital, Dilshad Garden</b>
+                </div>
+                <div class="cme-item">
+                  <span class="cme-label">Format</span>
+                  <span>Clinical Symposium &bull; Multidisciplinary Hematology Review</span>
+                </div>
+              </div>
+              <div class="cme-footer">
+                <span class="cme-tag">CME Credits Applicable</span>
+                <button class="btn btn-sm btn-ghost add-cal-btn" data-title="DSH Q2 CME: Haemoglobinopathies & Thalassaemia" data-desc="DSH Quarterly CME Meeting at UCMS & GTB Hospital on Complex Thalassaemias & Antenatal Screening" data-loc="UCMS & GTB Hospital, Delhi">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+                  Add to Calendar (.ics)
+                </button>
+              </div>
+            </article>
+
+            <article class="cme-card highlight">
+              <div class="cme-quarter">Annual Conference &bull; September</div>
+              <h3>The 31st Annual Conference of Delhi Society of Hematology</h3>
+              <p class="cme-desc">The flagship annual academic gathering featuring pre-conference masterclasses, invited national and international faculty, plenary symposia, and postgraduate oral/poster paper presentations.</p>
+              <div class="cme-details">
+                <div class="cme-item">
+                  <span class="cme-label">Venue</span>
+                  <b>Sir Ganga Ram Hospital Auditorium / GRIPMER, New Delhi</b>
+                </div>
+                <div class="cme-item">
+                  <span class="cme-label">Format</span>
+                  <span>2-Day Comprehensive Conference &bull; Plenary Orations &bull; Research Abstracts</span>
+                </div>
+              </div>
+              <div class="cme-footer">
+                <span class="cme-tag badge-gold">Flagship Annual Meeting</span>
+                <button class="btn btn-sm btn-primary add-cal-btn" data-title="DSH Annual Conference of Hematology" data-desc="Annual Conference of Delhi Society of Hematology: Pre-conference CME, Orations, and Research Papers" data-loc="Sir Ganga Ram Hospital, Rajinder Nagar, New Delhi">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+                  Add to Calendar (.ics)
+                </button>
+              </div>
+            </article>
+
+            <article class="cme-card">
+              <div class="cme-quarter">Q4 Meeting &bull; December</div>
+              <h3>Refractory Coagulopathies, TTP &amp; Thrombotic Microangiopathies</h3>
+              <p class="cme-desc">Diagnostic dilemma in ADAMTS13 assays, atypical HUS differentiation, emergency plasma exchange workflows, and new anti-CD38 / complement inhibitors in clinical practice.</p>
+              <div class="cme-details">
+                <div class="cme-item">
+                  <span class="cme-label">Venue</span>
+                  <b>Army Hospital (Research &amp; Referral), Dhaula Kuan, Delhi Cantt</b>
+                </div>
+                <div class="cme-item">
+                  <span class="cme-label">Format</span>
+                  <span>Intensive Case Rounds &bull; Critical Care Hematology Panel</span>
+                </div>
+              </div>
+              <div class="cme-footer">
+                <span class="cme-tag">CME Credits Applicable</span>
+                <button class="btn btn-sm btn-ghost add-cal-btn" data-title="DSH Q4 CME: Coagulopathies & TMA" data-desc="DSH Quarterly CME Meeting at Army Hospital (R&R) on Thrombotic Microangiopathies & Coagulation Emergencies" data-loc="Army Hospital (R&R), Delhi Cantt">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+                  Add to Calendar (.ics)
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Tab 2: Conference Timeline Milestones -->
+        <div class="prog-tab-content" id="tab-timeline">
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <div class="timeline-year">1989</div>
+              <div class="timeline-content">
+                <h4>Inception of the Delhi Society of Hematology</h4>
+                <p>Pioneering clinical hematologists and laboratory scientists in Delhi assemble to form a dedicated forum to exchange complex cases and advance clinical standards across academic medical colleges.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">1999</div>
+              <div class="timeline-content">
+                <h4>10th Annual Conference Milestone</h4>
+                <p>DSH establishes its formalized quarterly CME rotation cycle across AIIMS, MAMC, Safdarjung, Lady Hardinge, and Base Hospital Delhi Cantt.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2014</div>
+              <div class="timeline-content">
+                <h4>Silver Jubilee: 25th Annual Conference</h4>
+                <p>A quarter-century celebration of hematology scholarship in the capital, surpassing 450 life members and establishing competitive postgraduate research awards.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2018</div>
+              <div class="timeline-content">
+                <h4>Institution of the DSH Oration</h4>
+                <p>The executive committee formally institutes the annual DSH Oration to honor distinguished Indian hematologists who have made epochal contributions to patient care and academic literature.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-content">
+                <h4>30th Annual Conference &amp; Register Expansion</h4>
+                <p>Convened with distinction in September 2019, recording 611 registered life members across Delhi NCR and Northern India, solidifying DSH as the specialty benchmark.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Honours & Awards -->
+        <div class="prog-tab-content" id="tab-awards">
+          <div class="awards-grid">
+            <div class="award-card">
+              <div class="award-badge">Annual Scientific Honor</div>
+              <h3>The DSH Oration</h3>
+              <p class="award-desc">Conferred annually upon an eminent hematologist or clinical researcher of international repute. The orator delivers the keynote address opening the Annual Conference.</p>
+              <div class="award-recipients">
+                <div class="recipient-row">
+                  <span class="rec-year">Inaugural Orator (2018)</span>
+                  <b>Dr. Usha Rusia</b>
+                  <span class="rec-sub">Renowned Professor of Pathology &amp; Hematology, UCMS &amp; GTB Hospital</span>
+                </div>
+                <div class="recipient-row">
+                  <span class="rec-year">30th Annual Conference (2019)</span>
+                  <b>Dr. Renu Saxena</b>
+                  <span class="rec-sub">Former Head, Department of Hematology, AIIMS New Delhi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="award-card">
+              <div class="award-badge">Highest Society Accolade</div>
+              <h3>Dr. S.K. Sood Lifetime Achievement Award</h3>
+              <p class="award-desc">Named in profound honor of Dr. S. K. Sood, acknowledging career-long dedication, mentorship of generations of trainees, and foundational leadership in Indian hematology.</p>
+              <div class="award-recipients">
+                <div class="recipient-row">
+                  <span class="rec-year">Conferred Recipient</span>
+                  <b>Dr. V. P. Choudhry</b>
+                  <span class="rec-sub">Eminent Pediatric Hematologist, Former Professor &amp; Head, AIIMS New Delhi</span>
+                </div>
+                <div class="recipient-row">
+                  <span class="rec-year">Conferred Recipient</span>
+                  <b>Dr. Manorama Bhargava</b>
+                  <span class="rec-sub">Pioneer Hematopathologist, Former Professor &amp; Head, AIIMS New Delhi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <button class="btn btn-sm btn-ghost" data-target="about">&larr; Back to About</button>
+        <span class="win-foot-status">Academic Programme &amp; CMEs &bull; Delhi Society of Hematology</span>
+        <button class="btn btn-sm btn-primary" data-target="directory">Next: Member Register (__MEMBERS_COUNT__) &rarr;</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================= SECTION 4: MEMBER REGISTER ================= -->
+  <article class="sub-window" id="win-directory" data-win="directory" role="tabpanel" aria-labelledby="tab-btn-directory">
+    <section id="directory">
+      <div class="wrap">
+        <div class="window-inner-head">
+          <span class="overline">Official Register of Members</span>
+          <h2 class="title">The Certified Membership Register,<br><em>DSH/LM/001 — __MEMBERS_COUNT__</em></h2>
+          <p>Certified public register of __MEMBERS_COUNT__ life members. Search and filter by name, institutional affiliation, registration number, medical rank, or contact availability with real-time institutional search and filters.</p>
+        </div>
+
+        <!-- Directory Shell -->
+        <div class="dir-shell">
+          <!-- Search & Filters Toolbar -->
+          <div class="dir-toolbar">
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+              <input id="dir-search" type="text" placeholder="Search by name, LM number (e.g. 067), institution, city or email…" autocomplete="off" spellcheck="false">
+              <button class="search-clear" id="dir-clear" aria-label="Clear search">✕</button>
+            </div>
+
+            <div class="filter-group">
+              <!-- Institution Filter -->
+              <div class="select-wrap">
+                <label for="dir-inst-filter" class="sr-only">Filter by Institution</label>
+                <select class="slim" id="dir-inst-filter" aria-label="Filter by Institution">
+                  <option value="all">All Institutions</option>
+                  <option value="AIIMS">AIIMS, New Delhi</option>
+                  <option value="UCMS">UCMS &amp; GTB Hospital</option>
+                  <option value="MAMC">Maulana Azad Medical College (MAMC)</option>
+                  <option value="SGRH">Sir Ganga Ram Hospital</option>
+                  <option value="LHMC">Lady Hardinge Medical College</option>
+                  <option value="AHRR">Army Hospital (R&amp;R) / Base Hospital</option>
+                  <option value="SAFDARJUNG">Safdarjung Hospital / VMMC</option>
+                  <option value="PRIVATE">Max &bull; Apollo &bull; Medanta &bull; Fortis</option>
+                </select>
+              </div>
+
+              <!-- Rank / Title Filter -->
+              <div class="select-wrap">
+                <label for="dir-rank-filter" class="sr-only">Filter by Rank</label>
+                <select class="slim" id="dir-rank-filter" aria-label="Filter by Designation/Rank">
+                  <option value="all">All Designations</option>
+                  <option value="dr">Dr.</option>
+                  <option value="mil">Military (Col / Lt. Col)</option>
+                  <option value="mrs">Dr. (Mrs.)</option>
+                </select>
+              </div>
+
+              <!-- Contact Availability Filter -->
+              <div class="select-wrap">
+                <label for="dir-filter" class="sr-only">Filter by Contact</label>
+                <select class="slim" id="dir-filter" aria-label="Filter by Contact">
+                  <option value="all">All Records</option>
+                  <option value="email">Reachable via E-mail</option>
+                  <option value="mobile">With Mobile Number</option>
+                  <option value="both">With E-mail &amp; Mobile</option>
+                  <option value="addr">With Postal Address</option>
+                </select>
+              </div>
+
+              <!-- Sort Order -->
+              <div class="select-wrap">
+                <label for="dir-sort" class="sr-only">Sort Records</label>
+                <select class="slim" id="dir-sort" aria-label="Sort by">
+                  <option value="num">Sort — Member # (Asc)</option>
+                  <option value="num-desc">Sort — Member # (Desc)</option>
+                  <option value="name">Sort — Name A–Z</option>
+                  <option value="name-desc">Sort — Name Z–A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action & View Controls Bar -->
+          <div class="dir-actions-bar">
+            <div class="dir-meta" id="dir-meta">
+              <span><span class="dot"></span>Showing <b id="dir-count">0</b> of <b>__MEMBERS_COUNT__</b> Life Members</span>
+            </div>
+
+            <div class="view-and-export">
+              <div class="view-toggle" role="radiogroup" aria-label="Directory view style">
+                <button class="view-btn active" id="viewTableBtn" data-view="table" aria-pressed="true" title="Table View">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18"/></svg>
+                  <span>Table</span>
+                </button>
+                <button class="view-btn" id="viewCardBtn" data-view="card" aria-pressed="false" title="Card Grid View">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  <span>Cards</span>
+                </button>
+              </div>
+
+              <button class="btn btn-sm btn-ghost" id="exportCsvBtn" title="Download filtered members as CSV spreadsheet">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Export CSV
+              </button>
+              <button class="btn btn-sm btn-ghost print-dir-btn" id="printDirBtn" title="Print this directory view">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Print Register
+              </button>
+            </div>
+          </div>
+
+          <!-- Container: Table View -->
+          <div class="dir-view-container" id="dirTableContainer">
+            <div class="table-scroll">
+              <table class="dir" id="dirTable">
+                <thead>
+                  <tr>
+                    <th data-sort="num" scope="col">Member #<span class="srt">↑</span></th>
+                    <th data-sort="name" scope="col">Name &amp; Honors</th>
+                    <th scope="col">Department &amp; Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Institute</th>
+                    <th scope="col" style="text-align:center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="dir-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Container: Card Grid View -->
+          <div class="dir-view-container" id="dirCardContainer" style="display:none">
+            <div class="member-cards-grid" id="dir-cards-body"></div>
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty" id="dir-empty" style="display:none">
+            <div class="empty-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8M8 11h6"/></svg>
+            </div>
+            <b>No matching members found</b>
+            <p>Try searching by surname, membership number (e.g. 067), or clearing filters.</p>
+            <button class="btn btn-sm btn-ghost" id="emptyResetBtn" style="margin-top:14px">Reset All Filters</button>
+          </div>
+
+          <!-- Directory Pagination -->
+          <div class="pager">
+            <div class="pager-size">
+              <span>Rows per page:</span>
+              <select id="dir-per-page" aria-label="Rows per page">
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+                <option value="__MEMBERS_COUNT__">Show All (__MEMBERS_COUNT__)</option>
+              </select>
+            </div>
+            <div class="pager-nav">
+              <button id="dir-first" aria-label="First page" title="First page">&laquo;</button>
+              <button id="dir-prev" aria-label="Previous page" title="Previous page">&larr;</button>
+              <span class="pages-note" id="dir-page-note">Page 1 / 19</span>
+              <button id="dir-next" aria-label="Next page" title="Next page">&rarr;</button>
+              <button id="dir-last" aria-label="Last page" title="Last page">&raquo;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dir-footnote">
+          <span><b>Note:</b> Register entry DSH/LM/224 is marked &ldquo;Record Expired&rdquo; on the original archives and noted with &dagger;.</span>
+          <span>Official public record archived 10 August 2020 &bull; Delhi Society of Hematology</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <button class="btn btn-sm btn-ghost" data-target="programme">&larr; Back to Programme</button>
+        <span class="win-foot-status">Official Member Register &bull; Delhi Society of Hematology</span>
+        <button class="btn btn-sm btn-primary" data-target="certificate">Next: Certificate &amp; ID &rarr;</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================= SECTION 5: CERTIFICATE & ID SUITE ================= -->
+  <article class="sub-window" id="win-certificate" data-win="certificate" role="tabpanel" aria-labelledby="tab-btn-certificate">
+    <section id="certificate">
+      <div class="wrap">
+        <div class="window-inner-head center">
+          <span class="overline">Credential Verification</span>
+          <h2 class="title">Life Membership <em>Certificate &amp; ID</em></h2>
+          <p>Search any registered life member to preview, print, or download an official credential certificate and institutional pocket card.</p>
+        </div>
+
+        <div class="cert-suite">
+          <!-- Search Member for Certificate -->
+          <div class="cert-controls">
+            <div class="cert-picker">
+              <label for="certMemberSelect">Select or Search Registered Life Member:</label>
+              <div class="cert-input-row">
+                <input type="text" id="certSearchInput" class="slim" placeholder="Quick filter by LM number (e.g. 067) or name…" autocomplete="off" spellcheck="false" style="max-width:260px;border-left:1px solid var(--hairline)">
+                <select id="certMemberSelect" class="slim" style="flex:1;max-width:440px;border-left:1px solid var(--hairline)">
+                  <!-- Populated via JavaScript -->
+                </select>
+                <button class="btn btn-primary" id="printCertBtn">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  Print / Save Certificate PDF
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Printable Certificate Box -->
+          <div class="cert-display-area" id="certDisplayArea">
+            <div class="cert-card-shell" id="certDocument">
+              <div class="cert-border-outer">
+                <div class="cert-border-inner">
+                  <!-- Watermark Emblem -->
+                  <div class="cert-watermark" aria-hidden="true">
+                    <svg viewBox="0 0 24 32" fill="none">
+                      <path d="M12 3c3.4 5.8 6.8 9.3 6.8 13.6A6.8 6.8 0 1 1 5.2 16.6C5.2 12.3 8.6 8.8 12 3z" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </div>
+
+                  <!-- Header -->
+                  <div class="cert-header">
+                    <div class="cert-crest">
+                      <svg viewBox="0 0 24 32" fill="none">
+                        <path d="M12 3c3.4 5.8 6.8 9.3 6.8 13.6A6.8 6.8 0 1 1 5.2 16.6C5.2 12.3 8.6 8.8 12 3z" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="M9.4 17.2a3.2 3.2 0 0 0 3.2 3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <h3 class="cert-society-name">Delhi Society of Hematology</h3>
+                    <span class="cert-subheading">Registered Professional Society &bull; Est. 1989 &bull; Delhi-NCR, India</span>
+                    <div class="cert-divider-line"></div>
+                  </div>
+
+                  <!-- Title -->
+                  <div class="cert-title-block">
+                    <h2 class="cert-title">Certificate of Life Membership</h2>
+                    <div class="cert-reg-badge" id="certRegBadge">REGISTER ID: DSH/LM/067</div>
+                  </div>
+
+                  <!-- Body Copy -->
+                  <p class="cert-wording">This is to certify that</p>
+                  <h1 class="cert-member-name" id="certMemberName">Lt. Col. (Dr) Jyoti Kotwal</h1>
+                  <p class="cert-conferral">
+                    is duly admitted as a <b>Life Member</b> of the <b>Delhi Society of Hematology</b>,<br>
+                    entitled to all the rights, honors, privileges, and membership of the Society.
+                  </p>
+
+                  <div class="cert-meta-grid">
+                    <div class="cert-meta-col">
+                      <span class="cert-meta-lbl">Institution / Address:</span>
+                      <span class="cert-meta-val" id="certMemberAddr">Sir Ganga Ram Hospital &amp; GRIPMER, New Delhi</span>
+                    </div>
+                    <div class="cert-meta-col">
+                      <span class="cert-meta-lbl">Status:</span>
+                      <span class="cert-meta-val" id="certMemberStatus" style="color:var(--accent);font-weight:600">Life Member</span>
+                    </div>
+                  </div>
+
+                  <!-- Signatures & Seal -->
+                  <div class="cert-footer-row">
+                    <div class="cert-sig-block">
+                      <div class="sig-line">Dr. Meera Sikka</div>
+                      <span class="sig-title">President, DSH</span>
+                      <span class="sig-dept">Director Prof., Pathology, UCMS</span>
+                    </div>
+
+                    <div class="cert-seal">
+                      <div class="seal-circle">
+                        <span>OFFICIAL</span>
+                        <b>SEAL</b>
+                        <small>DSH &bull; 1989</small>
+                      </div>
+                    </div>
+
+                    <div class="cert-sig-block">
+                      <div class="sig-line">Dr. Jyoti Kotwal</div>
+                      <span class="sig-title">Secretary, DSH</span>
+                      <span class="sig-dept">Chairperson, Hematology, SGRH</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Companion Pocket Member ID Card Preview -->
+            <div class="cert-pocket-card" id="certPocketCard">
+              <div class="pocket-top">
+                <span class="p-brand">DSH &bull; DELHI SOCIETY OF HEMATOLOGY</span>
+                <span class="p-pill">LIFE MEMBER</span>
+              </div>
+              <div class="pocket-body">
+                <div class="pocket-avatar" id="pocketAvatar">JK</div>
+                <div class="pocket-details">
+                  <b id="pocketName">Lt. Col. (Dr) Jyoti Kotwal</b>
+                  <span id="pocketId">DSH/LM/067</span>
+                  <small id="pocketInst">Sir Ganga Ram Hospital &amp; GRIPMER</small>
+                </div>
+              </div>
+              <div class="pocket-footer">
+                <span>Specialty Membership &bull; Verified Credential</span>
+                <span>www.delhihaematology.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <button class="btn btn-sm btn-ghost" data-target="directory">&larr; Back to Register</button>
+        <span class="win-foot-status">Certificate &amp; ID Suite &bull; Delhi Society of Hematology</span>
+        <button class="btn btn-sm btn-primary" data-target="join">Next: Membership &amp; Join &rarr;</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- ================= SECTION 6: MEMBERSHIP & JOIN ================= -->
+  <article class="sub-window" id="win-join" data-win="join" role="tabpanel" aria-labelledby="tab-btn-join">
+    <section id="join">
+      <div class="wrap">
+        <div class="window-inner-head">
+          <span class="overline">Admissions &amp; Membership</span>
+          <h2 class="title">Join the Delhi Society of Hematology</h2>
+          <p class="lead-subhead">Apply for permanent life membership in Delhi's premier specialty association.</p>
+        </div>
+
+        <div class="join-grid">
+          <div class="join-copy">
+            <h3 class="join-sub-head">Membership Entitlements</h3>
+            <p class="lead-in">
+              Life membership confers full scientific access to quarterly academic conclaves, conference privileges,
+              orations, and inclusion in the certified professional directory.
+            </p>
+
+            <ul class="join-list">
+              <li>
+                <span class="mrk">01</span>
+                <div>
+                  <b>Quarterly Institutional CMEs</b>
+                  <p>Attend academic evenings and slide reviews at AIIMS, Sir Ganga Ram, UCMS, MAMC, and LHMC.</p>
+                </div>
+              </li>
+              <li>
+                <span class="mrk">02</span>
+                <div>
+                  <b>Annual September Conference</b>
+                  <p>Preferential delegate privileges and eligibility to present papers and original research.</p>
+                </div>
+              </li>
+              <li>
+                <span class="mrk">03</span>
+                <div>
+                  <b>Orations &amp; Lifetime Awards</b>
+                  <p>Nominate peers and participate in voting for society honors and lifetime recognitions.</p>
+                </div>
+              </li>
+              <li>
+                <span class="mrk">04</span>
+                <div>
+                  <b>Verified Register Inscription</b>
+                  <p>Permanent entry in the certified life member ledger and institutional networking directory.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="join-secretariat-note">
+              <h4>Secretariat Guidance</h4>
+              <p>Applications are reviewed by the Executive Committee during the quarterly conclaves. You may also contact the Secretary directly:</p>
+              <a class="mail-link" href="mailto:drjyotikotwal@gmail.com">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                drjyotikotwal@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Application Form -->
+          <form class="join" id="join-form" novalidate>
+            <div class="form-header">
+              <h3>Application for Life Membership</h3>
+              <p>Please provide your clinical credentials and institutional details.</p>
+            </div>
+
+            <div class="f-grid">
+              <div class="f-field">
+                <label for="j-title">Title / Salutation</label>
+                <select id="j-title" name="title">
+                  <option>Dr.</option>
+                  <option>Prof.</option>
+                  <option>Dr. (Mrs.)</option>
+                  <option>Col. (Dr.)</option>
+                  <option>Lt. Col. (Dr.)</option>
+                  <option>Mr.</option>
+                  <option>Ms.</option>
+                </select>
+              </div>
+
+              <div class="f-field">
+                <label for="j-first">First Name *</label>
+                <input id="j-first" name="first" placeholder="e.g. Achin" required autocomplete="given-name">
+              </div>
+
+              <div class="f-field">
+                <label for="j-mid">Middle Name</label>
+                <input id="j-mid" name="middle" placeholder="e.g. Kumar" autocomplete="additional-name">
+              </div>
+
+              <div class="f-field">
+                <label for="j-last">Surname *</label>
+                <input id="j-last" name="surname" placeholder="e.g. Sen" required autocomplete="family-name">
+              </div>
+
+              <div class="f-field full">
+                <label for="j-inst">Hospital / Academic Institute *</label>
+                <input id="j-inst" name="institute" placeholder="e.g. AIIMS, UCMS &amp; GTB Hospital, Sir Ganga Ram Hospital…" required>
+              </div>
+
+              <div class="f-field full">
+                <label for="j-addr">Postal Address / Department</label>
+                <input id="j-addr" name="address" placeholder="Department, Building, Street, Pin Code">
+              </div>
+
+              <div class="f-field">
+                <label for="j-mob">Mobile Number *</label>
+                <input id="j-mob" name="mobile" type="tel" placeholder="+91 98…" required autocomplete="tel">
+              </div>
+
+              <div class="f-field">
+                <label for="j-email">E-mail Address *</label>
+                <input id="j-email" name="email" type="email" placeholder="doctor@hospital.org" required autocomplete="email">
+              </div>
+
+              <div class="f-field full">
+                <label for="j-spec">Specialty / Field of Practice</label>
+                <select id="j-spec" name="specialty">
+                  <option>Clinical Hematology</option>
+                  <option>Hematopathology / Laboratory Medicine</option>
+                  <option>Pediatric Hematology &amp; Oncology</option>
+                  <option>Blood Transfusion &amp; Immuno-hematology</option>
+                  <option>Medical Oncology / Bone Marrow Transplant</option>
+                  <option>Postgraduate Trainee (MD / DM / DNB)</option>
+                </select>
+              </div>
+
+              <div class="f-field full">
+                <label for="j-msg">Message or Qualifications (Optional)</label>
+                <textarea id="j-msg" name="message" placeholder="Degrees (MBBS, MD, DM, FRCPath), years of practice, or specific research interests…"></textarea>
+              </div>
+            </div>
+
+            <button class="submit" type="submit">
+              <span>Submit Life Membership Application</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="note">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              Institutional demo form. Submissions are processed locally. On the original society domain, paper forms were verified at annual conferences.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer Navigator -->
+    <div class="window-footer-nav">
+      <div class="wrap win-foot-flex">
+        <button class="btn btn-sm btn-ghost" data-target="certificate">&larr; Back to Certificate &amp; ID</button>
+        <span class="win-foot-status">Membership &amp; Application &bull; Delhi Society of Hematology</span>
+        <button class="btn btn-sm btn-primary" data-target="home">Back to Overview ⌂</button>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand-col">
+        <div class="foot-logo">
+          <span class="mark">
+            <svg viewBox="0 0 24 32" fill="none">
+              <path d="M12 3c3.4 5.8 6.8 9.3 6.8 13.6A6.8 6.8 0 1 1 5.2 16.6C5.2 12.3 8.6 8.8 12 3z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M9.4 17.2a3.2 3.2 0 0 0 3.2 3.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <b>DSH</b>
+        </div>
+        <p class="foot-desc">
+          The Delhi Society of Hematology — an institutional membership of __MEMBERS_COUNT__ life members, advancing clinical hematology,
+          pathology, education, and patient care across the National Capital Region since 1989.
+        </p>
+        <div class="foot-metrics">
+          <span>__MEMBERS_COUNT__ Life Members</span> &bull; <span>30+ Annual Conferences</span> &bull; <span>Delhi-NCR, India</span>
+        </div>
+      </div>
+
+      <div>
+        <h4>Portal Directory</h4>
+        <ul class="foot-links">
+          <li><button class="foot-win-link" data-target="home">Overview &amp; Highlights</button></li>
+          <li><button class="foot-win-link" data-target="about">About the Society</button></li>
+          <li><button class="foot-win-link" data-target="programme">Academic Programme &amp; CMEs</button></li>
+          <li><button class="foot-win-link" data-target="directory">Official Member Register (__MEMBERS_COUNT__)</button></li>
+          <li><button class="foot-win-link" data-target="certificate">Member Certificate &amp; ID</button></li>
+          <li><button class="foot-win-link" data-target="join">Membership &amp; Join</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Executive Secretariat</h4>
+        <ul class="foot-sec-list">
+          <li><b>Dr. Jyoti Kotwal</b>, Secretary</li>
+          <li>Department of Hematology &amp; GRIPMER</li>
+          <li>Sir Ganga Ram Hospital, Rajinder Nagar</li>
+          <li>New Delhi — 110060, India</li>
+          <li style="margin-top:8px"><a href="mailto:drjyotikotwal@gmail.com" class="foot-mail">drjyotikotwal@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="baseline">
+      <span>&copy; Delhi Society of Hematology &bull; Public Register Archive (August 2020)</span>
+      <span>Standalone Institutional Portal &bull; Zero External Dependencies</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Member Detail Quick View Modal -->
+<div class="modal-backdrop" id="memberModalBackdrop" aria-hidden="true">
+  <div class="member-modal" role="dialog" aria-labelledby="modalMemberName" aria-modal="true">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">✕</button>
+    <div class="modal-header">
+      <div class="modal-avatar" id="modalAvatar">DR</div>
+      <div>
+        <span class="modal-badge" id="modalRegId">DSH/LM/001</span>
+        <h3 id="modalMemberName">Dr. Name Here</h3>
+        <p id="modalInst" class="modal-inst-txt"></p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-field">
+        <span class="modal-lbl">Postal Address:</span>
+        <p id="modalAddr" class="modal-val"></p>
+      </div>
+      <div class="modal-grid-2">
+        <div class="modal-field">
+          <span class="modal-lbl">Phone (Landline):</span>
+          <p id="modalPhone" class="modal-val"></p>
+        </div>
+        <div class="modal-field">
+          <span class="modal-lbl">Mobile:</span>
+          <p id="modalMobile" class="modal-val"></p>
+        </div>
+      </div>
+      <div class="modal-field">
+        <span class="modal-lbl">E-mail:</span>
+        <p id="modalEmail" class="modal-val"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-sm btn-ghost" id="modalCopyBtn">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy Contact Info
+      </button>
+      <button class="btn btn-sm btn-primary" id="modalCertBtn">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+        Generate Certificate
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Notification Toast -->
+<div id="toast" role="status" aria-live="polite">
+  <div class="toast-indicator"></div>
+  <div class="toast-text">
+    <b></b>
+    <small></small>
+  </div>
+</div>
+
+<script>
+const MEMBERS = __MEMBERS__;
+__JS__
+</script>
+</body>
+</html>
